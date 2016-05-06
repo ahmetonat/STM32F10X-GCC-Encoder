@@ -4,8 +4,11 @@ STM32F103: How to Connect a rotary volume encoder
 Rotary volume encoders are widely used. This example shows how they can be connected to the STM32F10x.
 
 Encoder is connected to port GPIOA
+
 PinA: PA0 Pulse A
+
 PinB: PA1 Pulse B
+
 PinC: PA3 Click press
 
 You can connect to other pins on port A, simply modify the #defines at the top of encoder.h. You can also connect to other GPIO pins, by doing a bit more surgery on the GPIO setup function: init_ENC_GPIO().
@@ -19,20 +22,31 @@ How to run it: Modify the Makefile and make. Program the processor. See that the
 For serial communications, it relies on the xprintf and xuart functions written by Elm ChaN (see elm-chan.org).
 
 Important functions:
+
   int ReadEnc_Guarded(void)
+
   Reads encoder state using a software algorithm.
+
   Returns:
+
         UP when click+ turn clockwise.
+
         DOWN when click+ turn counterclockwise.
+
         NOCHANGE else.
+
   return values are #defined in encoder.h
 
   void init_ENC_GPIO (void)
+
        Initializes the GPIO related with encoder.
 
   void init_LED_GPIO (void)
+
        Initializes the GPIO related with LED
 
   void init_USART1 (void)
+
        Enables USART1 RCC clock.
+
 The functions have been divided into separate files for different hardware and functionality for ease of implementation.
