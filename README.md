@@ -4,9 +4,9 @@ STM32F103: How to Connect a rotary volume encoder
 Rotary volume encoders are widely used. This example shows how they can be connected to the STM32F10x.
 
 Encoder is connected to port GPIOA
-PinA: PA0 //Pulse A
-PinB: PA1 //Pulse B
-PinC: PA3 //Click press
+PinA: PA0 Pulse A
+PinB: PA1 Pulse B
+PinC: PA3 Click press
 
 You can connect to other pins on port A, simply modify the #defines at the top of encoder.h. You can also connect to other GPIO pins, by doing a bit more surgery on the GPIO setup function: init_ENC_GPIO().
 
