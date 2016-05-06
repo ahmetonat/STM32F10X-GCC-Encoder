@@ -14,7 +14,7 @@ The encoder is read purely by software, no counter hardware is used. The signals
 
 What is does: It transmits a '1' over the serial port when the encoder is rotated clockwise, and '0' when it is rotated counterclokwise. This is a "guarded encoder", meaning it only responds if you *press* *and* turn. One value is sent at each encoder detent.
 
-How to run it: Modify the Makefile and make. Program the processor. See that the encoder pins are connected correctly and modify "encoder.h" as necessary. Connect USART1 pins to your PC, and run a terminal program (kermit, miniterm, hyperterminal etc.) at 115200bps. You can connect a USB-Serial converter also.
+How to run it: Modify the Makefile and make. Program the processor. See that the encoder pins are connected correctly and modify "encoder.h" as necessary. Connect USART1 pins to your PC, and run a terminal program (kermit, miniterm, hyperterminal etc.) at 115200bps. You can connect a USB-Serial converter also. PA10 is USART1-RX you must connect it to your PC TTL-TX, PA09 is USART1-TX you must connect it to your PC TTL-RX.
 
 For serial communications, it relies on the xprintf and xuart functions written by Elm ChaN (see elm-chan.org).
 
